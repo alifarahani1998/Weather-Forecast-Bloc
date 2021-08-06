@@ -6,7 +6,6 @@ abstract class WeatherEvent {}
 
 class FetchForCity extends WeatherEvent {
   final String city;
-
   FetchForCity({@required this.city});
 }
 

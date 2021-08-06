@@ -1,9 +1,9 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_forecast/controller/blocs/weather_bloc.dart';
-import 'package:weather_forecast/controller/cubits/network_cubit.dart';
-import 'package:weather_forecast/view/routes/route.dart';
+import 'package:weather_forecast/controllers/blocs/weather_bloc.dart';
+import 'package:weather_forecast/controllers/cubits/network_cubit.dart';
+import 'package:weather_forecast/views/routes/route.dart';
 
 
 void main() {

@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weather_forecast/view/screens/CitySelect.dart';
-import 'package:weather_forecast/view/screens/CurrentLoc.dart';
-import 'package:weather_forecast/view/screens/HomeScreen.dart';
+import 'package:weather_forecast/views/screens/CitySelect.dart';
+import 'package:weather_forecast/views/screens/CurrentLoc.dart';
+import 'package:weather_forecast/views/screens/HomeScreen.dart';
 
 
 

@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:location/location.dart';
 import 'package:http/http.dart' as http;
 import 'package:weather_forecast/constants/api.dart';
-import 'package:weather_forecast/model/weather_model.dart';
+import 'package:weather_forecast/models/weather_model.dart';
 
 
 class WeatherRepository {
@@ -15,19 +15,27 @@ class WeatherRepository {
     String lat = currentLocation.latitude.toString();
     String long = currentLocation.longitude.toString();
 
-    String url = GET_CITY_NAME_URL + lat + ',' + long;
+    String text = GET_CITY_NAME_URL + lat + ',' + long;
 
 
-    final response = await httpClient.get(Uri.parse(url));
+    final response = await httpClient.get(Uri.parse(text));
     if (response.statusCode != 200) {
       throw Exception('error getting city name');
     }
 
     var json = jsonDecode(response.body);
 
-    return getWeatherForCity(json[0]['title']);
-  }
 
+    final url = Uri.parse('${BASE_URL}q=${json[1]['title']}&apikey=$API_KEY');
+    final res = await httpClient.get(url);
+    if (response.statusCode != 200) {
+      throw Exception('error getting data');
+    }
+
+    var result = jsonDecode(res.body);
+
+    return Weather.parseJson(result);
+  }
 
 
   Future<Weather> getWeatherForCity(String city) async {
@@ -39,7 +47,7 @@ class WeatherRepository {
 
     var json = jsonDecode(response.body);
 
-    return Weather.fromJson(json);
+    return Weather.parseJson(json);
   }
 
 

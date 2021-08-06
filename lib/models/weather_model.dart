@@ -12,7 +12,7 @@ class Weather {
 
 
 
-  static Weather fromJson(dynamic json) {
+  static Weather parseJson(dynamic json) {
 
     return Weather(
       weatherCondition: json['weather'][0]['main'],

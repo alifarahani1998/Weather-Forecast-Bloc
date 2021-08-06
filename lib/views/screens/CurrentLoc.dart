@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_forecast/controller/blocs/weather_bloc.dart';
-import 'package:weather_forecast/model/weather_model.dart';
+import 'package:weather_forecast/controllers/blocs/weather_bloc.dart';
+import 'package:weather_forecast/models/weather_model.dart';
 
 class CurrentLocScreen extends StatefulWidget {
   @override
@@ -28,9 +28,7 @@ class _CurrentLocScreenState extends State<CurrentLocScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-
-      ),
+      appBar: AppBar(),
       body: Center(
         child: BlocBuilder<WeatherBloc, WeatherState>(
           cubit: _weatherBloc,
