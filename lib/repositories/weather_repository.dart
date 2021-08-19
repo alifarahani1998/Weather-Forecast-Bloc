@@ -15,15 +15,16 @@ class WeatherRepository {
     String lat = currentLocation.latitude.toString();
     String long = currentLocation.longitude.toString();
 
-    String text = GET_CITY_NAME_URL + lat + ',' + long;
+    String cityLatLong = GET_CITY_NAME_URL + lat + ',' + long;
 
-
-    final response = await httpClient.get(Uri.parse(text));
+    final response = await httpClient.get(Uri.parse(cityLatLong));
     if (response.statusCode != 200) {
       throw Exception('error getting city name');
     }
 
     var json = jsonDecode(response.body);
+
+
 
 
     final url = Uri.parse('${BASE_URL}q=${json[1]['title']}&apikey=$API_KEY');

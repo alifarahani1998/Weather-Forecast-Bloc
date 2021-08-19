@@ -2,8 +2,8 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:weather_forecast/models/weather_model.dart';
+import 'package:weather_forecast/repositories/weather_repository.dart';
 
-import '../../models/weather_repository.dart';
 
 part 'weather_event.dart';
 part 'weather_state.dart';

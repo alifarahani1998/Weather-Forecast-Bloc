@@ -1,4 +1,5 @@
 class Weather {
+
   String weatherCondition;
   String weatherDescription;
   double mainTemp;

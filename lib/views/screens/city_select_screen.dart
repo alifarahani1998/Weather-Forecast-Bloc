@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_forecast/controllers/blocs/weather_bloc.dart';
+import 'file:///C:/Users/Ali/Desktop/Weather-Forecast-Bloc/lib/blocs/weather/weather_bloc.dart';
 import 'package:weather_forecast/models/weather_model.dart';
-import 'package:weather_forecast/views/widgets/search_city.dart';
+import 'package:weather_forecast/views/widgets/search_city_widget.dart';
 
 
 class CitySelect extends StatefulWidget {

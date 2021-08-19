@@ -1,9 +1,8 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_forecast/controllers/blocs/weather_bloc.dart';
-import 'package:weather_forecast/controllers/cubits/network_cubit.dart';
 import 'package:weather_forecast/views/routes/route.dart';
+import 'blocs/weather/weather_bloc.dart';
 
 
 void main() {
@@ -27,8 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<NetworkCubit>(create: (context) => NetworkCubit(connectivity: connectivity)),
-        BlocProvider<WeatherBloc>(create: (context) => WeatherBloc())
+        BlocProvider<WeatherBloc>(create: (context) => WeatherBloc()),
       ],
       child: MaterialApp(
         title: 'Weather App',

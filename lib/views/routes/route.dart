@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:weather_forecast/views/screens/CitySelect.dart';
-import 'package:weather_forecast/views/screens/CurrentLoc.dart';
-import 'package:weather_forecast/views/screens/HomeScreen.dart';
+import 'package:weather_forecast/views/screens/city_select_screen.dart';
+import 'package:weather_forecast/views/screens/current_loc_screen.dart';
+import 'package:weather_forecast/views/screens/home_screen.dart';
 
 
 
